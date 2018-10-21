@@ -1,3 +1,6 @@
+cô có đọc được thì sửa giúp em với ạ!!
+nhập dữ liệu thì bị trôi dòng, đưng để cái kểu "int n; n=Integer.parse(keyboard.next());" thì lại không chạy được
+
 package giuaky;
 import java.util.Scanner;
 import java.util.Vector;
@@ -71,7 +74,7 @@ public void NhapTT()
 public void InTT() {
 	System.out.println(" Thong tin cong nhan:   ");
 	Enumeration b = list.elements();
-	int i=1;
+	
 	while(b.hasMoreElements())
 	{
 		Congnhani c = (Congnhani)b.nextElement();
@@ -82,14 +85,13 @@ public void InTT() {
 		System.out.println("Bang cap: "+c.getBang());
 		System.out.println("He so luong:"+c.getHsl());
 		
-		i++;
+		
 	}
 	System.out.println("\n--------------\n");
 }
 public void Tinhluong()
 {
 	Enumeration b = list.elements();
-	int i=1;
 	while(b.hasMoreElements())
 	{
 		Congnhani c = (Congnhani)b.nextElement();
@@ -100,6 +102,7 @@ public void Tinhluong()
 		 int nc=keyboard.nextInt();
 		
 		System.out.println("luong la : "+c.getHsl()*nc*1150000);
+		
 	}
 	}
 public void Timkiem()
