@@ -1,0 +1,91 @@
+package giuaky;
+import java.util.Scanner;
+import java.util.Vector;
+import java.util.Arrays;
+import java.util.Enumeration;
+public class Congnhani {
+	String ten,scm,bang;
+	int id,namsinh,nc;
+	float hsl;
+	double luong;
+	public int getNc() {
+		return nc;
+	}
+
+    public void setLuong(double luong) {
+		this.luong = luong;
+	}
+
+
+	public String getTen() {
+		return ten;
+	}
+
+
+	public void setTen(String ten) {
+		this.ten = ten;
+	}
+
+
+	public String getScm() {
+		return scm;
+	}
+
+
+	public void setScm(String scm) {
+		this.scm = scm;
+	}
+
+
+	public String getBang() {
+		return bang;
+	}
+
+
+	public void setBang(String bang) {
+		this.bang = bang;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public int getNamsinh() {
+		return namsinh;
+	}
+
+
+	public void setNamsinh(int namsinh) {
+		this.namsinh = namsinh;
+	}
+
+
+	public float getHsl() {
+		return hsl;
+	}
+
+
+	public void setHsl(float hsl) {
+		this.hsl = hsl;
+	}
+	public Congnhani() 
+	{}
+		// TODO Auto-generated constructor stub}
+		public Congnhani(int id, String ten, int namsinh, String scm, String bang, float hsl) {
+			 this.id=id;
+			 this.ten=ten;
+			 this.namsinh=namsinh;
+			 this.bang=bang;
+			 this.hsl=hsl;
+			 this.scm=scm;
+			
+			 
+	}
+	}
