@@ -1,0 +1,161 @@
+package giuaky;
+import java.util.Scanner;
+import java.util.Vector;
+import java.util.Arrays;
+import java.util.Enumeration;
+
+public class Congnhan {
+	Vector list = new Vector();
+	
+	
+
+	public Congnhan() {
+		while(true)
+		{
+			System.out.println("-CONG TY DET MAY-");
+			System.out.println("-CHUONG TRINH QUAN LY CONG NHAN-");
+	        System.out.println("moi ban chon chuc nang: ");
+	        System.out.println("1. Nhap danh sach cong nhan   ");
+	        System.out.println("2. Xem danh sach cong nhan    ");
+	        System.out.println("3. Tinh luong                 ");
+	        System.out.println("4. Tim kiem theo ma cong nhan ");
+	        System.out.println("0. thoat                      ");
+	        int n;
+	        Scanner key = new Scanner(System.in);
+	        n= key.nextInt();
+	             switch(n)
+	             { 
+	             case 1 : this.NhapTT();
+	                      break;
+	             case 2 : this.InTT();
+	                      break;
+	             case 3 : this.Tinhluong();
+	                      break;
+	             case 4 : this.Timkiem();
+	                     break;
+	                     
+	             case 0 : System.out.println("thoat chuong trinh ");
+	                      return;
+	             
+	             }
+		}
+	
+	}
+public void NhapTT()
+{ int n;
+  System.out.println("nhap so luong cong nhan: ");
+  Scanner key = new Scanner(System.in);
+  n = key.nextInt();
+  for(int i=1;i<=n;i++)
+  {
+	  System.out.println("nhap thong tin cho cong nhan thu "+i);
+	  System.out.println("MA ID CONG NHAN: ");
+	int id =key.nextInt();
+	
+	System.out.println("Ten: ");
+	String ten = key.nextLine();
+	
+	System.out.println("Nam sinh: ");
+	int namsinh=key.nextInt();
+	System.out.println("So chung minh: ");
+	String scm =key.nextLine();
+	System.out.println("Bang cap: ");
+	String bang=key.nextLine();
+	System.out.println("He so luong:");
+	float hsl=key.nextFloat();
+	Congnhani a = new Congnhani(id,ten,namsinh,scm,bang,hsl);
+	list.add(a);
+	}
+  System.out.println("\n--------------\n");
+	}
+public void InTT() {
+	System.out.println(" Thong tin cong nhan:   ");
+	Enumeration b = list.elements();
+	int i=1;
+	while(b.hasMoreElements())
+	{
+		Congnhani c = (Congnhani)b.nextElement();
+		System.out.println("MA ID CONG NHAN: "+c.getId());
+		System.out.println("Ten: "+c.getTen());
+		System.out.println("Nam sinh: "+c.getNamsinh());
+		System.out.println("So chung minh: "+c.getScm());
+		System.out.println("Bang cap: "+c.getBang());
+		System.out.println("He so luong:"+c.getHsl());
+		
+		i++;
+	}
+	System.out.println("\n--------------\n");
+}
+public void Tinhluong()
+{
+	Enumeration b = list.elements();
+	int i=1;
+	while(b.hasMoreElements())
+	{
+		Congnhani c = (Congnhani)b.nextElement();
+		System.out.println("Ma Id cong nhan: "+c.getId());
+		System.out.println("ten cong nhan: "+c.getTen());
+		System.out.println("nhap so ngay cong :");
+		Scanner keyboard = new Scanner(System.in);
+		 int nc=keyboard.nextInt();
+		
+		System.out.println("luong la : "+c.getHsl()*nc*1150000);
+	}
+	}
+public void Timkiem()
+{ System.out.println("---muc tim kiem---- ");
+System.out.println("nhap ten muon tim kiem: ");
+Scanner keyboard = new Scanner(System.in);
+String k =keyboard.nextLine();
+Enumeration b = list.elements();
+System.out.println("thong tin tim kiem duoc: ");
+while(b.hasMoreElements())
+{Congnhani c = (Congnhani)b.nextElement();
+ if (c.getTen().indexOf(k)!=1)
+ {System.out.println("MA ID CONG NHAN: "+c.getId());
+	System.out.println("Ten: "+c.getTen());
+	System.out.println("Nam sinh: "+c.getNamsinh());
+	System.out.println("So chung minh: "+c.getScm());
+	System.out.println("Bang cap: "+c.getBang());
+	System.out.println("He so luong:"+c.getHsl());
+	}
+	}
+
+
+	}
+public static void main(String[] args)
+{
+	new Congnhan();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
