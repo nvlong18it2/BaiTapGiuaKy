@@ -1,5 +1,4 @@
-cô có đọc được thì sửa giúp em với ạ!!
-nhập dữ liệu thì bị trôi dòng, đưng để cái kểu "int n; n=Integer.parse(keyboard.next());" thì lại không chạy được
+
 
 package giuaky;
 import java.util.Scanner;
